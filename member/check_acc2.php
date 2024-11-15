@@ -18,7 +18,7 @@ $row=$pdo->query($sql)->fetchColumn();
 if($row>=1){
     
     //$_SESSION['login']=$acc;
-    echo "<br><a href='login2.php'>回首頁</a>";
+    echo "<br><a href='success.php'>到編輯區</a>";
     // header("location:success.php");
 }else{
     header("location:login2.php?err=1");
