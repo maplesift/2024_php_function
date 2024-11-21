@@ -6,7 +6,7 @@
     <title>success</title>
 </head>
 <body>
-    <h1>登入成功</h1>
+    <h1> 編輯區</h1>
     <?php
     include "../function.php";
     $rows=all("member")
@@ -17,6 +17,17 @@
 // $rows=$pdo->query("select * from member")->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
+<div>
+        <?php
+        if (isset($_GET['status'])) {
+            if ($_GET['status'] == 1) {
+                echo "<h2>更新成功</h2>";
+            } else {
+                echo "<h2>更新失敗</h2>";
+            }
+        }
+        ?>
+</div>
 <table>
     <tr>
         <td>id</td>

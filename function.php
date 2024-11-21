@@ -78,7 +78,7 @@ function all($table){
 */
 function find($table,$id){
     $sql="select * from $table where ";
-    $pdo=$pdo=pdo('crud');
+    $pdo=pdo('crud');
 
     if(is_array($id)){
         $tmp=[];
@@ -103,7 +103,7 @@ function find($table,$id){
  * @return boolean
  */
 function del($table,$id){
-    $pdo=$pdo=pdo('crud');
+    $pdo=pdo('crud');
 
     if(is_array($id)){
         $tmp=[];
@@ -130,7 +130,7 @@ function del($table,$id){
 
  function update($table,$array,$id){
     $sql="update $table set ";
-    $pdo=$pdo=pdo('crud');
+    $pdo=pdo('crud');
     $tmp=[];
     foreach($array as $key => $value){
         $tmp[]="`$key`='$value'";

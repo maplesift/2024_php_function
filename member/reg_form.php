@@ -11,68 +11,79 @@ if(!empty($_POST)){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>會員註冊</title>
     <style>
-        h1{
+        h1 {
             text-align: center;
-
         }
-        form{
+
+        .div-a {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
             width: 400px;
             margin: 20px auto;
             padding: 20px;
             /* border:1px solid #ccc; */
-            border-radius:10px;
+            border-radius: 10px;
 
         }
-        form label{
-            display:inline-block;
+
+        form label {
+            display: inline-block;
             width: 80px;
-            text-align-last:justify;
+            text-align-last: justify;
         }
-        form div{
+
+        form div {
             margin: 5px 0;
         }
+
         form input[type=text],
         form input[type=password],
         form input[type=date],
-        form input[type=number]
-        {
+        form input[type=number] {
             padding: 4px;
             font-size: 20px;
-            border:0px;
-            border-bottom:1px solid #ccc;
+            border: 0px;
+            border-bottom: 1px solid #ccc;
         }
+
         form input[type=submit],
-        form input[type=reset]
-        {
+        form input[type=reset] {
             padding: 5px 10px;
-            font-size:14px;
+            font-size: 14px;
             background-color: red;
-            border-radius :5px;
+            border-radius: 5px;
             margin: 10px 10px;
-            border:1px solid #eee;
+            border: 1px solid #eee;
             cursor: pointer;
         }
+
         form input[type=submit]:hover,
-        form input[type=reset]:hover
-        {
+        form input[type=reset]:hover {
             padding: 7px 12px;
         }
-        form input[type=reset]{
+
+        form input[type=reset] {
             background-color: #cc6;
             /* background-color: red; */
         }
-        form div:nth-child(5){
+
+        form div:nth-child(5) {
             text-align: center;
         }
     </style>
 </head>
+
 <body>
-<div>
+    <div>
         <?php
         if (isset($_GET['status'])) {
             if ($_GET['status'] == 1) {
@@ -107,9 +118,10 @@ if(!empty($_POST)){
             <input type="reset" value="重置">
         </div>
     </form>
-    <?php
-    include "../function.php";
-    starts('菱形',9);
-    ?>
+    <div class="div-a">
+        <a href="./login2.php">登入頁面</a>
+    </div>
+    <hr>
 </body>
+
 </html>

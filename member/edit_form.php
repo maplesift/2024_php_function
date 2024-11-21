@@ -66,9 +66,9 @@
         <?php
         if (isset($_GET['status'])) {
             if ($_GET['status'] == 1) {
-                echo "註冊成功";
+                echo "更新成功";
             } else {
-                echo "註冊失敗";
+                echo "更新失敗";
             }
         }
         ?>
